@@ -9,6 +9,10 @@
  */
 var _ = require('lodash');
 
+// added
+var _ = require('underscore'),
+    keystone = require('keystone');
+// added
 
 /**
 	Initialises the standard view locals
@@ -18,6 +22,11 @@ var _ = require('lodash');
 	or replace it with your own templates / logic.
 */
 exports.initLocals = function (req, res, next) {
+
+	// added
+	var locals = res.locals;
+	// added
+
 	res.locals.navLinks = [
 		{ label: 'Home', key: 'home', href: '/' },
 		{ label: 'Gallery', key: 'gallery', href: '/gallery' },
@@ -27,6 +36,33 @@ exports.initLocals = function (req, res, next) {
 	res.locals.user = req.user;
 	next();
 };
+
+///////////////////////////NEW ADDED CODE//////////////////////////
+/**
+    Inits the error handler functions into `res`
+*/
+exports.initErrorHandlers = function(req, res, next) {
+
+    res.err = function(err, title, message) {
+        res.status(500).render('errors/500', {
+            err: err,
+            errorTitle: title,
+            errorMsg: message
+        });
+    }
+
+    res.notfound = function(title, message) {
+        res.status(404).render('errors/404', {
+            errorTitle: title,
+            errorMsg: message
+        });
+    }
+
+    next();
+
+};
+
+/////////////////////////////////////////////////////////////////////////////
 
 
 /**
