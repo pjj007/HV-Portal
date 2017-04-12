@@ -6,14 +6,14 @@
  * Alternatively, you can export a custom function for the update:
  * module.exports = function(done) { ... }
  */
-
+/*
 exports.create = {
 	User: [
 		{ 'name.first': 'Admin', 'name.last': 'User', 'email': 'user@keystonejs.com', 'password': 'admin', 'isAdmin': true },
 	],
 };
 
-/*
+*/
 
 // This is the long-hand version of the functionality above:
 
@@ -45,5 +45,3 @@ function createAdmin (admin, done) {
 exports = module.exports = function (done) {
 	async.forEach(admins, createAdmin, done);
 };
-
-*/

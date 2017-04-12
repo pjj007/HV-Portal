@@ -4,8 +4,11 @@
 	<div class="container">
 		<div class="jumbotron">
 			<img src="/images/logo.svg" width="160">
-			<h1>Welcome</h1>
-			
+			<h1>USC High Visual Portal</h1>
+			<p>
+				Where you can upload, drag and drop images and files on to the CAVE scene
+			</p>
+
 			<hr>
 			{% if user and user.canAccessKeystone %}
 				<p>
@@ -19,10 +22,7 @@
 				</p>
 			{% endif %}
 			<hr>
-			<p>
-				Remember to <a href="https://github.com/keystonejs/keystone" target="_blank">Star KeystoneJS on GitHub</a> and
-				<a href="https://twitter.com/keystonejs" target="_blank">follow @keystonejs</a> on twitter for updates.
-			</p>
+
 		</div>
 	</div>
 {% endblock %}

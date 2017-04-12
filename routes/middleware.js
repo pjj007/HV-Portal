@@ -9,10 +9,6 @@
  */
 var _ = require('lodash');
 
-// added
-var _ = require('underscore'),
-    keystone = require('keystone');
-// added
 
 /**
 	Initialises the standard view locals
@@ -31,7 +27,7 @@ exports.initLocals = function (req, res, next) {
 		{ label: 'Home', key: 'home', href: '/' },
 		{ label: 'Gallery', key: 'gallery', href: '/gallery' },
 		{ label: 'Contact', key: 'contact', href: '/contact' },
-		{ label: 'HelloWorld', key: 'contact', href: '/contact' },
+		//{ label: 'HelloWorld', key: 'contact', href: '/contact' },
 	];
 	res.locals.user = req.user;
 	next();

@@ -26,7 +26,10 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-	'cloudinary config': 'cloudinary://346188379452821:sZ6tgmf-QCamMTVRq43f8UkJ-uQ@pjj007'
+	'cloudinary config': 'cloudinary://346188379452821:sZ6tgmf-QCamMTVRq43f8UkJ-uQ@pjj007',
+	'mongo' : process.env.MONGO_URI || process.env.MONGOLAB_URI || 'mongodb://localhost/HV-Portal',
+	'cloudinary config' : 'cloudinary://346188379452821:sZ6tgmf-QCamMTVRq43f8UkJ-uQ@pjj007'
+
 
 });
 
@@ -55,11 +58,15 @@ keystone.set('nav', {
 	users: 'users',
 });
 
+
 // Configure the cloudinary account
 keystone.set('cloudinary config', 'cloudinary://346188379452821:sZ6tgmf-QCamMTVRq43f8UkJ-uQ@pjj007' );
-keystone.set('cloudinary prefix', 'keystone');	
+keystone.set('cloudinary prefix', 'keystone');
 keystone.set('cloudinary secure', true);
 keystone.set('cloudinary folders', true);
+
+keystone.set('cloudinary config', 'cloudinary://346188379452821:sZ6tgmf-QCamMTVRq43f8UkJ-uQ@pjj007' );
+
 
 // Start Keystone to connect to your database and initialise the web server
 
