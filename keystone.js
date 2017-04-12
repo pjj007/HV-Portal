@@ -45,12 +45,15 @@ keystone.set('locals', {
 keystone.set('routes', require('./routes'));
 
 
+
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
 	galleries: 'galleries',
 	enquiries: 'enquiries',
 	users: 'users',
 });
+
+keystone.set('cloudinary config', 'CLOUDINARY_URL=cloudinary://346188379452821:sZ6tgmf-QCamMTVRq43f8UkJ-uQ@pjj007' );
 
 // Start Keystone to connect to your database and initialise the web server
 
