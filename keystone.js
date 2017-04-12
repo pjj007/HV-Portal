@@ -26,6 +26,8 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+	'cloudinary config': 'cloudinary://346188379452821:sZ6tgmf-QCamMTVRq43f8UkJ-uQ@pjj007'
+
 });
 
 // Load your project's Models
@@ -53,7 +55,11 @@ keystone.set('nav', {
 	users: 'users',
 });
 
-keystone.set('cloudinary config', 'CLOUDINARY_URL=cloudinary://346188379452821:sZ6tgmf-QCamMTVRq43f8UkJ-uQ@pjj007' );
+// Configure the cloudinary account
+keystone.set('cloudinary config', 'cloudinary://346188379452821:sZ6tgmf-QCamMTVRq43f8UkJ-uQ@pjj007' );
+keystone.set('cloudinary prefix', 'keystone');	
+keystone.set('cloudinary secure', true);
+keystone.set('cloudinary folders', true);
 
 // Start Keystone to connect to your database and initialise the web server
 
