@@ -26,6 +26,9 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+	'mongo' : process.env.MONGO_URI || process.env.MONGOLAB_URI || 'mongodb://localhost/HV-Portal'
+	'cloudinary config' : 'cloudinary://346188379452821:sZ6tgmf-QCamMTVRq43f8UkJ-uQ@pjj007'
+	
 });
 
 // Load your project's Models
@@ -53,7 +56,7 @@ keystone.set('nav', {
 	users: 'users',
 });
 
-keystone.set('cloudinary config', 'CLOUDINARY_URL=cloudinary://346188379452821:sZ6tgmf-QCamMTVRq43f8UkJ-uQ@pjj007' );
+keystone.set('cloudinary config', 'cloudinary://346188379452821:sZ6tgmf-QCamMTVRq43f8UkJ-uQ@pjj007' );
 
 // Start Keystone to connect to your database and initialise the web server
 
