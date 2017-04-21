@@ -49,13 +49,16 @@ keystone.set('locals', {
 // Load your project's Routes
 keystone.set('routes', require('./routes'));
 
-
+// Add a Cave Scene Nav bar
+var cavescenes = new keystone.List('cavescenes');
+cavescenes.register();
 
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
 	galleries: 'galleries',
 	enquiries: 'enquiries',
 	users: 'users',
+	cavescenes: 'cavescenes'
 });
 
 

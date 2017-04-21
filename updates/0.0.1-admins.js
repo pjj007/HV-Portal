@@ -6,14 +6,15 @@
  * Alternatively, you can export a custom function for the update:
  * module.exports = function(done) { ... }
  */
-/*
+
 exports.create = {
 	User: [
 		{ 'name.first': 'Admin', 'name.last': 'User', 'email': 'user@keystonejs.com', 'password': 'admin', 'isAdmin': true },
+		{ 'name.first': 'Admin', 'name.last': 'User', 'email': 'test@keystonejs.com', 'password': 'admin', 'isAdmin': true },
 	],
 };
 
-*/
+
 
 // This is the long-hand version of the functionality above:
 
@@ -22,7 +23,8 @@ var async = require('async');
 var User = keystone.list('User');
 
 var admins = [
-	{ email: 'user@keystonejs.com', password: 'admin', name: { first: 'Admin', last: 'User' } }
+	{ email: 'user@keystonejs.com', password: 'admin', name: { first: 'Admin', last: 'User' } },
+	{ email: 'test@keystonejs.com', password: 'admin', name: { first: 'Admin', last: 'User' } }
 ];
 
 function createAdmin (admin, done) {

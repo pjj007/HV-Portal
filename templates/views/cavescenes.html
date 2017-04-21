@@ -1,0 +1,23 @@
+{% extends "layouts/default.html" %}
+
+{% block intro %}
+<div class="container">
+  <h1>CAVE Scene </h1>
+  </div>
+  {% endblock %}
+
+  {% block content %}
+
+  <div class= "row">
+    <div class= "col-md-12 col-lg-12">
+        <div class= "row">
+          {% for image in cavescenes.image %}
+            <div class="col-md-4 col-lg-4">
+              <h2><a href= "">{{ cavescenes.title }}</a></h2>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+{% endblock %}
